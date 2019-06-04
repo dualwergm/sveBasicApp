@@ -1,17 +1,19 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import OptionsModal from '../../sections/components/options-modal';
+import ds from '../../utils/d-theme';
 
 function VarListLayout(props){
     return (
         <View style={styles.container}>
-            <OptionsModal
-                {...props}
-            >
-                <View style={styles.cbuttons}>
-                    <View style={styles.opbutton}>
-                        <Text style={{color: 'white'}} >Holaaaaa</Text>
-                    </View>
+            <OptionsModal {...props} >
+                <View style={[ds.center, styles.cbtns]}>
+                    <TouchableOpacity style={[ds.pbtn, ds.mb3]}>
+                        <Text style={ds.ptxtbtn} >Explorar</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={ds.pbtn}>
+                        <Text style={ds.ptxtbtn} >Ingresar valor</Text>
+                    </TouchableOpacity>
                 </View>
             </OptionsModal>
             {props.children}
@@ -22,14 +24,6 @@ function VarListLayout(props){
 const styles = StyleSheet.create({
     container: {
         flex: 1
-    },
-    cbuttons: {
-        flex: 1
-    },
-    opbutton: {
-        width: 200,
-        height: 50,
-        backgroundColor: 'blue'    
     }
 });
 

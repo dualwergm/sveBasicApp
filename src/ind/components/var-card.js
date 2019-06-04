@@ -7,7 +7,7 @@ import ds from '../../utils/d-theme';
 function VarCard(props){
     let tagvalid;
     if(!props.isDate){
-        tagvalid = <View style={styles.cvalid}><Text style={[ds.ti14, {color: 'white'}]}>No vigente</Text></View>;
+        tagvalid = <View style={styles.cvalid}><Text style={[ds.ti1, {color: 'white'}]}>No vigente</Text></View>;
     }
     return (
         <TouchableOpacity style={styles.ccard}
@@ -28,11 +28,11 @@ function VarCard(props){
                     </View>
                     <View style={styles.cvalue}>
                         <Text style={styles.value}>{props.value}</Text>
-                        <Text style={ds.ti14}>{props.date}</Text>
+                        <Text style={ds.ti1}>{props.date}</Text>
                     </View>
                     <View style={styles.cvalue}>
-                        <Text style={ds.ti14}>{props.unit}</Text>
-                        <Text style={ds.ti14}>{props.timer}</Text>
+                        <Text style={ds.ti1}>{props.unit}</Text>
+                        <Text style={ds.ti1}>{props.timer}</Text>
                     </View>
                     {tagvalid}
 
