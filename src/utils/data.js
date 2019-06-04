@@ -75,7 +75,22 @@ const testData = {
             timer: 'Mensual',
             isDate: true
         }
-    ]
+    ],
+    graphic: {
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+              data: [
+                47.25,
+                79.58,
+                75.8,
+                12.77,
+                99,
+                63
+              ]
+            }]
+          }
+    }
 };
 
 export default testData;
