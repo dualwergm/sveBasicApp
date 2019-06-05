@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
         position: 'relative'
     },
     cclose: {
-        right: 15,
-        top: 15,
+        right: 25,
+        top: 25,
         position: 'absolute'
     }
 });
