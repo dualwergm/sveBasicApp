@@ -35,7 +35,6 @@ function VarCard(props){
                         <Text style={ds.ti1}>{props.timer}</Text>
                     </View>
                     {tagvalid}
-
                 </View>
             </CardView>
         </TouchableOpacity>

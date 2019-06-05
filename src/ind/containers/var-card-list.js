@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {FlatList, ToastAndroid} from 'react-native';
 import VData from '../../utils/data';
 import VarCard from '../components/var-card';
 import VarListLayout from '../components/var-list-layout';
@@ -7,7 +7,8 @@ import VarListLayout from '../components/var-list-layout';
 class VarList extends Component{
     state = {
         list: VData.inds,
-        modalVisible: false
+        modalVisible: false,
+        selected: {}
     };
     toggleModal = () => {
         this.setState({
@@ -16,6 +17,9 @@ class VarList extends Component{
     }; 
     showOptions = (item) => {
         console.log(item);
+        this.setState({
+            selected: item
+        });
         this.toggleModal();
     };
     renderItem = ({item}) => {
@@ -25,12 +29,24 @@ class VarList extends Component{
             />
         );
     };
+    exploreVar = () => {
+        this.setState({
+            modalVisible: false
+        });
+        ToastAndroid.show(this.state.selected.name, ToastAndroid.LONG);
+        this.props.navigation.navigate('Explore');
+    };
+    addValue = () => {
+        ToastAndroid.show(this.state.selected.name, ToastAndroid.LONG);
+    };
     keyExtractor = item => `${item.id}`
     render(){
         return (
             <VarListLayout
                 modalVisible={this.state.modalVisible}
                 toggleModal={this.toggleModal}
+                fnexplore={this.exploreVar}
+                fnaddvalue={this.addValue}
             >
                 <FlatList
                     keyExtractor={this.keyExtractor}
