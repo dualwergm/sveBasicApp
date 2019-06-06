@@ -14,7 +14,7 @@ const ds = StyleSheet.create({
         justifyContent: 'center',
         flex: 1
     },
-    pbtn: {
+    pbtn: { //primary - btn
         width: 200,
         height: 50,
         alignItems: 'center', 
@@ -29,6 +29,22 @@ const ds = StyleSheet.create({
     },
     mb3: {
         marginBottom: 30
+    },
+    mv3: {
+        marginVertical: 30
+    },
+    tn3b: {
+        fontWeight: 'bold',
+        fontSize: 18
+    },
+    tn3: {
+        fontSize: 18
+    },
+    mh1:{
+        marginHorizontal: 10
+    },
+    mt2: {
+        marginTop: 20
     }
 });
 

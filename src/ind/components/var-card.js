@@ -3,11 +3,12 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import CardView from 'react-native-cardview';
 import State from './state';
 import ds from '../../utils/d-theme';
+import inds from '../../utils/ind-theme';
 
 function VarCard(props){
     let tagvalid;
     if(!props.isDate){
-        tagvalid = <View style={styles.cvalid}><Text style={[ds.ti1, {color: 'white'}]}>No vigente</Text></View>;
+        tagvalid = <View style={inds.cvalid}><Text style={[ds.ti1, {color: 'white'}]}>No vigente</Text></View>;
     }
     return (
         <TouchableOpacity style={styles.ccard}
@@ -19,15 +20,15 @@ function VarCard(props){
             >
                 <View style={styles.cinner}>
                     <View style={styles.ctitle}>
-                        <Text style={styles.title}>{props.name}</Text>
-                        <View style={styles.cstate}>
+                        <Text style={ds.tn3b}>{props.name}</Text>
+                        <View style={inds.cstate}>
                             <State 
                                 {...props.state}
                             />
                         </View>                        
                     </View>
                     <View style={styles.cvalue}>
-                        <Text style={styles.value}>{props.value}</Text>
+                        <Text style={ds.tn3}>{props.value}</Text>
                         <Text style={ds.ti1}>{props.date}</Text>
                     </View>
                     <View style={styles.cvalue}>
@@ -56,32 +57,11 @@ const styles = StyleSheet.create({
         borderBottomColor: '#eaeaea',
         marginVertical: 3
     },
-    cstate: {
-        right: 0,
-        top: 0,
-        position: 'absolute'
-    },
     cvalue: {
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
         flex: 1,
-    },
-    title: {
-        fontWeight: 'bold',
-        fontSize: 18
-    },
-    value: {
-        fontSize: 18
-    },
-    cvalid: {
-        borderRadius: 4,
-        padding: 2,
-        backgroundColor: '#5769e7',
-        width: 100,
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1
     }
 });
 
