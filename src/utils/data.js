@@ -152,6 +152,106 @@ const testData = {
               color: 'yellow'
             }
         ]
+    },
+    tableValues: {
+        values: [
+            {
+                date: '30/Jun/2018 23:59',
+                state: {
+                    color: '#4caf50'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '31/Jul/2018 23:59',
+                state: {
+                    color: '#4caf50'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '30/Ago/2018 23:59',
+                state: {
+                    color: '#4caf50'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '31/Sep/2018 23:59',
+                state: {
+                    color: '#4caf50'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '31/Oct/2018 23:59',
+                state: {
+                    color: '#ffeb3b'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '30/Nov/2018 23:59',
+                state: {
+                    color: '#ffeb3b'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '31/Dic/2018 23:59',
+                state: {
+                    color: '#ffeb3b'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '31/Ene/2018 23:59',
+                state: {
+                    color: '#ffeb3b'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '28/Feb/2018 23:59',
+                state: {
+                    color: '#ffeb3b'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '31/Mar/2018 23:59',
+                state: {
+                    color: '#ffeb3b'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '30/Abr/2018 23:59',
+                state: {
+                    color: '#4caf50'
+                },
+                value: 857.25,
+                target: 1000
+            },
+            {
+                date: '31/May/2018 23:59',
+                state: {
+                    color: '#ffeb3b'
+                },
+                value: 857.25,
+                target: 1000
+            },
+        ]
     }
 };
 

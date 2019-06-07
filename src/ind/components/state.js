@@ -3,13 +3,18 @@ import {View, Image, StyleSheet} from 'react-native';
 import {iconsState} from '../../utils/icons-path';
 
 function State(props){
-    return (
-        <View style={[styles.container, {backgroundColor: props.color || '#5e5e5e'}]}>
-            <Image source={iconsState[props.icon]} 
+    let imgTab;
+    if(props.icon){
+        imgTab =   <Image source={iconsState[props.icon]} 
                 style={[styles.icon, {
                         transform: [ { rotate: props.icon === '2' ? '90deg' : props.icon === '3' ? '180deg' : '0deg' }]
                     }]} 
             /> 
+    }
+
+    return (
+        <View style={[styles.container, {backgroundColor: props.color || '#5e5e5e'}]}>
+            {imgTab}
         </View>
     );
 }

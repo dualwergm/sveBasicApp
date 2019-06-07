@@ -9,6 +9,9 @@ const ds = StyleSheet.create({
         fontStyle: 'italic',
         fontSize: 14
     },
+    tn1: {
+        fontSize: 14
+    },
     center: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -21,6 +24,9 @@ const ds = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 7,
         backgroundColor: '#04B5EB'
+    },
+    bold: {
+        fontWeight: 'bold',
     },
     ptxtbtn: {
         fontWeight: 'bold',
@@ -39,6 +45,9 @@ const ds = StyleSheet.create({
     },
     tn3: {
         fontSize: 18
+    },
+    mr1:{
+        marginRight: 10
     },
     mh1:{
         marginHorizontal: 10

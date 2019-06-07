@@ -3,6 +3,7 @@ import { View, StyleSheet, Dimensions, Text } from 'react-native';
 import {withNavigation} from 'react-navigation';
 import {TabView, SceneMap} from 'react-native-tab-view';
 import ExploreResults from '../components/explore-results';
+import ExploreValues from '../components/explore-values';
 
 class ExploreLayout extends Component {
     state = {
@@ -30,9 +31,7 @@ class ExploreLayout extends Component {
         </View>
     );
     loadValues = () => (
-        <View style={[styles.scene, { backgroundColor: '#673ab7', justifyContent: 'center', alignItems: 'center' }]}>
-            <Text style={{color: 'white'}}>Holaaaa yo seré la tabla de valores</Text>
-        </View>
+        <ExploreValues />
     ); 
 
     render(){
