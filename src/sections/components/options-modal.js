@@ -13,6 +13,7 @@ function OptionsModal(props){
                 <View style={[styles.cmodal, { backgroundColor: 'rgba(0, 0, 0, 0.8)'}]}>
                     <TouchableOpacity style={styles.cclose}
                         onPress={props.toggleModal}
+                        hitSlop={{ left: 5, top:5, bottom:5, right: 5 }}
                     >
                         <Image source={require('../../../assets/close.png')} />
                     </TouchableOpacity>

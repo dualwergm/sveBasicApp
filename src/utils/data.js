@@ -131,7 +131,7 @@ const testData = {
                 {x: 'Nov/2019', y: 55},
                 {x: 'Dic/2019', y: 90}
               ],
-              color: '#297AB1'
+              color: 'rgba(3, 187, 191, 0.8)'
             },
             {
               seriesName: 'series2',
@@ -149,7 +149,7 @@ const testData = {
                 {x: 'Nov/2019', y: 43},
                 {x: 'Dic/2019', y: 30}
               ],
-              color: 'yellow'
+              color: 'rgba(4, 181, 235, 0.8)'
             }
         ]
     },

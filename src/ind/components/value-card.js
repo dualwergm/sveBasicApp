@@ -7,7 +7,9 @@ import inds from '../../utils/ind-theme';
 
 function VarCard(props){
     return (
-        <TouchableOpacity style={styles.ccard} >
+        <TouchableOpacity style={styles.ccard} 
+            onPress={props.onPress}
+        >
             <CardView
                 cardElevation={1}
                 cornerRadius={5}

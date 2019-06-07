@@ -2,22 +2,41 @@ import React, {Component} from 'react';
 import {FlatList} from 'react-native';
 import VData from '../../utils/data';
 import ValueCard from '../components/value-card';
-
+import ValueListLayout from '../components/value-list-layout';
 
 class ExploreValues extends Component {
+    state = {
+        modalVisible: false,
+    };
+    toggleModal = () => {
+        this.setState({
+            modalVisible: !this.state.modalVisible
+        });
+    };
+    toComment = (item) => {
+        this.toggleModal();
+    };
     renderItem = ({item}) => {
         return (
-            <ValueCard {...item}/>
+            <ValueCard {...item}
+                onPress={() => {this.toComment(item)}}
+            />
         );
     };
     keyExtractor = item => `${item.date}`
     render(){
         return (
-            <FlatList
-                keyExtractor={this.keyExtractor}
-                data={VData.tableValues.values}
-                renderItem={this.renderItem}
-            />
+            <ValueListLayout
+                modalVisible={this.state.modalVisible}
+                toggleModal={this.toggleModal}
+            >
+                <FlatList
+                    keyExtractor={this.keyExtractor}
+                    data={VData.tableValues.values}
+                    renderItem={this.renderItem}
+                />
+            </ValueListLayout>
+            
         );
     }
 }
