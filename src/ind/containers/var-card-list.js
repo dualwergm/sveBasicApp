@@ -33,7 +33,7 @@ class VarList extends Component{
         this.setState({
             modalVisible: false
         });
-        this.props.navigation.navigate('Explore', {varitem: {...this.state.selected}});
+        this.props.navigation.navigate('ExploreBTabs', {varitem: {...this.state.selected}});
     };
     addValue = () => {
         ToastAndroid.show(this.state.selected.name, ToastAndroid.LONG);

@@ -32,7 +32,17 @@ function ExploreResults(props) {
                     </View>
                 </CardView>
             </View>
-            <View style={ds.mt2}>
+            <View style={[ds.mt2, styles.cgraphic]}>
+                <View style={[styles.cheader, ds.mb2]}>
+                    <View style={{alignItems: 'center', flexDirection:'row'}}>
+                        <View style={{backgroundColor: '#7b1fa2', width: 15, height: 15, marginRight: 3}}/>
+                        <Text style={ds.tn2}>{item.name}</Text>
+                    </View>
+                    <View style={{alignItems: 'center', flexDirection:'row'}}>
+                        <View style={{backgroundColor: '#e64a19', width: 15, height: 15, marginRight: 3}}/>
+                        <Text style={ds.tn2}>Meta</Text>
+                    </View>
+                </View>
                 <PureGraphic />
             </View>
         </View>
@@ -49,6 +59,16 @@ const styles = StyleSheet.create({
     cinner: {
         padding: 10,
     },
+    cgraphic: {
+        paddingRight: 10
+    },
+    cheader: {
+        paddingLeft: 15,
+        paddingRight: 5,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row'
+    }
 });
 
 export default withNavigation(ExploreResults);

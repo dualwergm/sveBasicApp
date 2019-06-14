@@ -33,11 +33,17 @@ const ds = StyleSheet.create({
         fontSize: 24,
         color: 'white'
     },
+    mb2: {
+        marginBottom: 20
+    },
     mb3: {
         marginBottom: 30
     },
     mv3: {
         marginVertical: 30
+    },
+    tn2: {
+        fontSize: 16
     },
     tn3b: {
         fontWeight: 'bold',

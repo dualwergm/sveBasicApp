@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     },
     comment: {
         width: Dimensions.get('window').width-40, 
-        height: 180,
+        height: 150,
         backgroundColor: '#ffffff',
         borderColor: 'gray', 
         borderWidth: 1,

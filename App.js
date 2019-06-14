@@ -3,6 +3,7 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 import Home from './src/home/containers/home';
 import VarList from './src/ind/containers/var-card-list';
 import Explore from './src/ind/containers/explore-layout';
+import ExploreBTabs from './src/ind/containers/explore-btab';
 
 const AppNavigator = createStackNavigator(
   {
@@ -13,7 +14,7 @@ const AppNavigator = createStackNavigator(
         title: 'Mis variables'
       }
     },
-    Explore
+    ExploreBTabs
   }
 );
 
