@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
 import ExploreResults from '../components/explore-results';
 import ExploreValues from '../components/explore-values';
+import AnalysisLayout from './explore-analysis-layout';
 
-class HomeScreen extends React.Component {
+class ResultsTab extends React.Component {
   render() {
     return (
       <ExploreResults />
@@ -13,7 +14,7 @@ class HomeScreen extends React.Component {
   }
 }
 
-class SettingsScreen extends React.Component {
+class ValuesTab extends React.Component {
   render() {
     return (
       <ExploreValues />
@@ -21,12 +22,10 @@ class SettingsScreen extends React.Component {
   }
 }
 
-class AnalysisScreen extends React.Component {
+class AnalysisTab extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Análisis</Text>
-      </View>
+      <AnalysisLayout />
     );
   }
 }
@@ -43,7 +42,6 @@ class IconWithBadge extends React.Component {
 }
 
 const HomeIconWithBadge = props => {
-  // You should pass down the badgeCount in some other ways like context, redux, mobx or event emitters.
   return <IconWithBadge {...props} badgeCount={3} />;
 };
 
@@ -70,17 +68,17 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 const ExploreBTabs = createAppContainer(
   createBottomTabNavigator(
     {
-      results: { screen: HomeScreen,
+      results: { screen: ResultsTab,
         navigationOptions: {
           title: 'Resultados'
         }
       },
-      values: { screen: SettingsScreen,
+      values: { screen: ValuesTab,
         navigationOptions: {
           title: 'Valores'
         }
       },
-      analysis: { screen: AnalysisScreen,
+      analysis: { screen: AnalysisTab,
         navigationOptions: {
           title: 'Análisis'
         }
@@ -92,7 +90,7 @@ const ExploreBTabs = createAppContainer(
           getTabBarIcon(navigation, focused, tintColor),
       }),
       tabBarOptions: {
-        activeTintColor: 'tomato',
+        activeTintColor: '#04B5EB',
         inactiveTintColor: 'gray',
       },
     }

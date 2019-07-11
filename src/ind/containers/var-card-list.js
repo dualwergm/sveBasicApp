@@ -16,7 +16,6 @@ class VarList extends Component{
         });
     }; 
     showOptions = (item) => {
-        console.log(item);
         this.setState({
             selected: item
         });
@@ -38,7 +37,7 @@ class VarList extends Component{
     addValue = () => {
         ToastAndroid.show(this.state.selected.name, ToastAndroid.LONG);
     };
-    keyExtractor = item => `${item.id}`
+    keyExtractor = item => `${item.id}`;
     render(){
         return (
             <VarListLayout

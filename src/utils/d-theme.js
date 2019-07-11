@@ -39,6 +39,9 @@ const ds = StyleSheet.create({
     mb3: {
         marginBottom: 30
     },
+    mv1: {
+        marginVertical: 10
+    },
     mv3: {
         marginVertical: 30
     },

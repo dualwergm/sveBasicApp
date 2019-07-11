@@ -131,7 +131,7 @@ const testData = {
                 {x: 'Nov/2019', y: 55},
                 {x: 'Dic/2019', y: 90}
               ],
-              color: 'rgba(3, 187, 191, 0.8)'
+              color: 'rgba(249, 94, 95, 0.8)'
             },
             {
               seriesName: 'series2',
@@ -149,7 +149,7 @@ const testData = {
                 {x: 'Nov/2019', y: 43},
                 {x: 'Dic/2019', y: 30}
               ],
-              color: 'rgba(4, 181, 235, 0.8)'
+              color: 'rgba(241, 143, 2, 0.8)'
             }
         ]
     },
@@ -252,7 +252,49 @@ const testData = {
                 target: 1000
             },
         ]
-    }
+    },
+    comments: [
+        {
+            id: 1,
+            title: "El valor continúa igual",
+            userName: 'Andrea Castro Luna',
+            description: "El resultado significa que la empresa tiene una razón corriente de 77 a 100. Esto quiere decir que por cada peso que la empresa debe en el corto plazo tiene $ 0.7 para pagar o respaldar sus obligaciones de corto plazo. Con este resultado se puede inferir que la compañía presenta un nivel de solvencia no aceptable para responder a sus deudas.",
+            date: '26/abr/2019',
+            opened: false
+        },
+        {
+            id: 2,
+            title: "El valor es un texto corto",
+            userName: 'Andrea Castro Luna',
+            description: "Yo soy un texto corto y no deben cortarme. Si me cortan algo anda mal );",
+            date: '26/abr/2019',
+            opened: false
+        },
+        {
+            id: 3,
+            title: "Se va a necesitar un valor diferente",
+            userName: 'Andrea Castro Luna',
+            description: "El resultado significa que la empresa tiene una razón corriente de 77 a 100. Esto quiere decir que por cada peso que la empresa debe en el corto plazo tiene $ 0.7 para pagar o respaldar sus obligaciones de corto plazo. Con este resultado se puede inferir que la compañía presenta un nivel de solvencia no aceptable para responder a sus deudas.",
+            date: '26/abr/2019',
+            opened: false
+        },
+        {
+            id: 4,
+            title: "Un título cualquiera repetido",
+            userName: 'Andrea Castro Luna',
+            description: "Yo soy un texto con exactamente 100 caractéres y estoy completado con puras letras aleatorias ertert",
+            date: '26/abr/2019',
+            opened: false
+        },
+        {
+            id: 5,
+            title: "Este es el último titulo",
+            userName: 'Andrea Castro Luna',
+            description: "El resultado significa que la empresa tiene una razón corriente de 77 a 100. Esto quiere decir que por cada peso que la empresa debe en el corto plazo tiene $ 0.7 para pagar o respaldar sus obligaciones de corto plazo. Con este resultado se puede inferir que la compañía presenta un nivel de solvencia no aceptable para responder a sus deudas.",
+            date: '26/abr/2019',
+            opened: false
+        }
+    ]
 };
 
 export default testData;

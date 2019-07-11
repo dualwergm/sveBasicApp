@@ -23,6 +23,11 @@ class ExploreValues extends Component {
             />
         );
     };
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: navigation.getParam('name') || 'Explorar'
+        };
+    };
     keyExtractor = item => `${item.date}`
     render(){
         return (
