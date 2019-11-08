@@ -3,6 +3,9 @@ package com.svebasicapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.swmansion.reanimated.ReanimatedPackage;
+import com.horcrux.svg.SvgPackage;
 import com.kishanjvaghela.cardview.RNCardViewPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +28,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new VectorIconsPackage(),
+            new ReanimatedPackage(),
+            new SvgPackage(),
             new RNCardViewPackage(),
             new RNGestureHandlerPackage()
       );
